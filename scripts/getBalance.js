@@ -1,7 +1,7 @@
 const hre = require("hardhat");
-const tokenContractJSON = require("../artifacts/contracts/MonkeyRush.sol/MonkeyRush.json");
+const tokenContractJSON = require("../artifacts/contracts/MonkeyMarket.sol/MonkeyMarket.json");
 
-const tokenAddress = process.env.ContractAddress;
+const tokenAddress = process.env.TokenAddress;
 const tokenABI = tokenContractJSON.abi;
 const walletAddress = process.env.WalletAddress;
 
@@ -11,7 +11,7 @@ async function main() {
     const balance = await token.balanceOf(walletAddress);
     console.log(`Polygon Amoy NFT Balance: ${balance} NFT`);
   } catch (error) {
-    console.log("Deposited NFT Proccessing Delayed");
+    console.log("Deposited NFT Proccessing Delayed",error);
     process.exitCode = 1;
   }
 }
