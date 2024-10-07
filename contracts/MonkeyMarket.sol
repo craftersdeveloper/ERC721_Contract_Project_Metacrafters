@@ -4,7 +4,7 @@ pragma solidity ^0.8.9;
 
 import "erc721a/contracts/ERC721A.sol";
 
-contract MonkeyRush is ERC721A {
+contract MonkeyMarket is ERC721A {
     
     address public owner;
     uint256 public constant MAX_SUPPLY = 5;
@@ -12,7 +12,7 @@ contract MonkeyRush is ERC721A {
     string private baseTokenURI =
         "https://tan-adequate-marsupial-982.mypinata.cloud/ipfs/QmNV1XkX82DfhoveV5FguTVgxSseJW7he43a7Au6pgk8RP/";
 
-    constructor() ERC721A("MonkeyRush", "MR") {
+    constructor() ERC721A("MonkeyMarket", "MM") {
         owner = msg.sender;
     }
 
